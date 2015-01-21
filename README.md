@@ -7,6 +7,7 @@ chinese language plugins for highcharts
 * 优化了时间显示
 * 图表中额外的资源替换为国内稳定快速的CDN服务--[Highcharts中文网CDN服务](http://cdn.hcharts.cn)
 
+第一个版本只优化上述内容，欢迎你提出更多优化需求，我们将在今后的版本中继续优化。
 
 ### 使用方法
 
@@ -25,5 +26,5 @@ chinese language plugins for highcharts
 
 ### 示例
 
-* 示例1：(http://code.hcharts.cn/hcharts.cn/hhhhL2)
+* 示例1：http://code.hcharts.cn/hcharts.cn/hhhhL2
 * 示例2：
