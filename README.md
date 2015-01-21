@@ -25,5 +25,5 @@ chinese language plugins for highcharts
 
 ### 示例
 
-** 示例1：
-** 示例2：
+* 示例1：
+* 示例2：
