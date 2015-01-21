@@ -27,4 +27,4 @@ chinese language plugins for highcharts
 ### 示例
 
 * 示例1：http://code.hcharts.cn/hcharts.cn/hhhhL2
-* 示例2：
+
