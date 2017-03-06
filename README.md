@@ -1,5 +1,6 @@
 # highcharts-zh_CN
-chinese language plugins for highcharts
+
+Chinese language plugins for highcharts
 
 ### 针对中文优化的Highcharts插件，优化的内容有
 
@@ -27,4 +28,12 @@ chinese language plugins for highcharts
 ### 示例
 
 * 示例1：http://code.hcharts.cn/hcharts.cn/hhhhL2
+
+### 中文资源包
+
+不同于中文插件，中文资源包是以设置全局配置的形式来修改所有语言文字
+
+文件地址：http://cdn.hcharts.cn/highcharts-plugins/highcharts-lang-zh_CN.js
+
+使用方法是在所有
 
