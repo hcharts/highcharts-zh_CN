@@ -1,5 +1,5 @@
 /**
- * Highcharts-zh_CN plugins v1.0.0 (2017-02-22)
+ * Highcharts-zh_CN plugins v1.0.2 (2017-02-22)
  *
  * (c) 2017 Jianshu Technology CO.,LTD (https://jianshukeji.com)
  *

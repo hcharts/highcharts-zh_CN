@@ -1,5 +1,5 @@
 /**
- * Highcharts-zh_CN plugins v1.0.1 (2017-04-05)
+ * Highcharts-zh_CN plugins v1.0.2 (2017-04-05)
  *
  * (c) 2017 Jianshu Technology Co.,LTD (https://jianshukeji.com)
  *
@@ -44,7 +44,8 @@
         },
 
         global: {
-            useUTC: true,
+            // 不使用 UTC时间
+            // useUTC: false,
             //timezoneOffset: -8 * 60,
             canvasToolsURL: protocol + '//cdn.hcharts.cn/highcharts/modules/canvas-tools.js',
             VMLRadialGradientURL: protocol + +'//cdn.hcharts.cn/highcharts/gfx/vml-radial-gradient.png'
@@ -61,10 +62,11 @@
                 minute: '%H:%M',
                 hour: '%H:%M',
                 day: '%Y-%m-%d',
-                week: 'Week from %A, %b %e, %Y',
+                week: '%Y-%m-%d',
                 month: '%Y-%m',
                 year: '%Y'
-            }
+            },
+            split: false
         },
 
         exporting: {
@@ -121,6 +123,43 @@
                 type: 'all',
                 text: '所有'
             }]
+        },
+
+        plotOptions: {
+            series: {
+                dataGrouping: {
+                    dateTimeLabelFormats: {
+                        millisecond: ['%Y-%m-%d %H:%M:%S.%L', '%Y-%m-%d %H:%M:%S.%L', ' ~ %H:%M:%S.%L'],
+                       second: ['%Y-%m-%d %H:%M:%S', '%Y-%m-%d %H:%M:%S', ' ~ %H:%M:%S'],
+                       minute: ['%Y-%m-%d %H:%M', '%Y-%m-%d %H:%M', ' ~ %H:%M'],
+                       hour: ['%Y-%m-%d %H:%M', '%Y-%m-%d %H:%M', ' ~ %H:%M'],
+                       day: ['%Y-%m-%d', '%Y-%m-%d', ' ~ %Y-%m-%d'],
+                       week: ['%Y-%m-%d', '%Y-%m-%d', ' ~ %Y-%m-%d'],
+                       month: ['%Y-%m', '%Y-%m', ' ~ %Y-%m'],
+                       year: ['%Y', '%Y', ' ~ %Y']
+                    }
+                }
+            },
+            ohlc: {
+                tooltip: {
+                    split: false,
+                pointFormat: '<span style="color:{point.color}">\u25CF</span> <b> {series.name}</b><br/>' + 
+                    '开盘：{point.open}<br/>' +
+                    '最高：{point.high}<br/>' +
+                    '最低：{point.low}<br/>' +
+                    '收盘：{point.close}<br/>'
+                }
+            },
+            candlestick: {
+                tooltip: {
+                    split: false,
+                pointFormat: '<span style="color:{point.color}">\u25CF</span> <b> {series.name}</b><br/>' + 
+                    '开盘：{point.open}<br/>' +
+                    '最高：{point.high}<br/>' +
+                    '最低：{point.low}<br/>' +
+                    '收盘：{point.close}<br/>'
+                }
+            }
         }
     };
 
