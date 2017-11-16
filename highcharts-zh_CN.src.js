@@ -1,5 +1,5 @@
 /**
- * Highcharts-zh_CN plugins v1.0.2 (2017-04-05)
+ * Highcharts-zh_CN plugins v1.0.3 (2017-04-05)
  *
  * (c) 2017 Jianshu Technology Co.,LTD (https://jianshukeji.com)
  *
@@ -31,7 +31,7 @@
             resetZoomTitle: '重置为原始大小',
             shortMonths: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'],
             thousandsSep: ',',
-            weekdays: ['星期一', '星期二', '星期三', '星期四', '星期五', '星期六', '星期天'],
+            weekdays: ['星期天', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'],
 
             // Highstock
             rangeSelectorFrom: '开始时间',
@@ -91,6 +91,11 @@
             }
         },
 
+        /**
+         * Highstock
+         */
+        
+        
         rangeSelector: {
             inputDateFormat: '%Y-%m-%d',
             buttonTheme: {
