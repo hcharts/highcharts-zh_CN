@@ -8,7 +8,14 @@
  * License: Creative Commons Attribution (CC)
  */
 
-(function(H) {
+(function (factory) {
+  if (typeof module === 'object' && module.exports) {
+    module.exports = factory;
+  } else {
+    factory(Highcharts);
+  }
+})(function (Highcharts) {
+
     var protocol = window.location.protocol;
 
     var defaultOptionsZhCn = {
@@ -168,5 +175,5 @@
         }
     };
 
-    H.setOptions(defaultOptionsZhCn);
-}(Highcharts));
+    Highcharts.setOptions(defaultOptionsZhCn);
+});
