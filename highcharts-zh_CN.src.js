@@ -107,13 +107,13 @@
         
         rangeSelector: {
             inputDateFormat: '%Y-%m-%d',
-            buttonTheme: {
-                width: 'auto',
-                style: {
-                    fontSize: '12px',
-                    padding: '4px'
-                }
-            },
+            // buttonTheme: {
+            //     width: 'auto',
+            //     style: {
+            //         fontSize: '12px',
+            //         padding: '4px'
+            //     }
+            // },
             buttons: [{
                 type: 'month',
                 count: 1,
