@@ -1,5 +1,5 @@
 /**
- * Highcharts-zh_CN plugins v1.1.0 (2020-07-03)
+ * Highcharts-zh_CN ES6 版本 plugins v1.2.0 (2020-07-03)
  *
  * (c) 2020 Jianshu Technology Co.,LTD (https://jianshukeji.com)
  *
@@ -10,14 +10,13 @@
 
 export default H => {
 
-    var protocol = window.location.protocol;
+    let protocol = window.location.protocol;
 
-    var defaultOptionsZhCn = {
+    let defaultOptionsZhCn = {
         lang: {
             // Highcharts
             contextButtonTitle: '图表导出菜单',
             decimalPoint: '.',
-            downloadCSV: "下载 CSV 文件",
             downloadJPEG: "下载 JPEG 图片",
             downloadPDF: "下载 PDF 文件",
             downloadPNG: "下载 PNG 文件",
@@ -29,7 +28,7 @@ export default H => {
                 categoryDatetimeHeader: '时间',
                 categoryHeader: '类别'
             },
-
+            openInCloud: '在 Highcharts Cloud 中打开',
             invalidDate: '无效的时间',
             loading: '加载中...',
             months: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'],
@@ -110,7 +109,7 @@ export default H => {
             viewData: '查看数据表格',
             viewFullscreen: '全屏查看',
             weekdays: ['星期天', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'],
-
+            viewData: '查看数据表格',
             // Highstock
             rangeSelectorFrom: '开始时间',
             rangeSelectorTo: '结束时间',
@@ -118,7 +117,7 @@ export default H => {
 
             // Highmaps
             zoomIn: '缩小',
-            zoomOut: '放大'
+            zoomOut: '放大',
         },
 
         global: {
@@ -176,13 +175,6 @@ export default H => {
 
         rangeSelector: {
             inputDateFormat: '%Y-%m-%d',
-            buttonTheme: {
-                width: 'auto',
-                style: {
-                    fontSize: '12px',
-                    padding: '4px'
-                }
-            },
             buttons: [{
                 type: 'month',
                 count: 1,
