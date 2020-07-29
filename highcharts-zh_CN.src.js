@@ -1,5 +1,5 @@
 /**
- * Highcharts-zh_CN plugins v1.2.0 (2020-07-03)
+ * Highcharts-zh_CN plugins v1.2.1 (2020-07-29)
  *
  * (c) 2020 Jianshu Technology Co.,LTD (https://jianshukeji.com)
  *
@@ -17,6 +17,9 @@
 })(function(Highcharts) {
 
     var protocol = window.location.protocol;
+    if (!/^http(s)?:&/.test(protocol)) {
+        protocol = 'http:';
+    }
 
     var defaultOptionsZhCn = {
         lang: {
