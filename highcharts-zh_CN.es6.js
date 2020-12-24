@@ -129,7 +129,7 @@ export default H => {
             // useUTC: false,
             //timezoneOffset: -8 * 60,
             canvasToolsURL: protocol + '//cdn.hcharts.cn/highcharts/modules/canvas-tools.js',
-            VMLRadialGradientURL: protocol + +'//cdn.hcharts.cn/highcharts/gfx/vml-radial-gradient.png'
+            VMLRadialGradientURL: protocol + '//cdn.hcharts.cn/highcharts/gfx/vml-radial-gradient.png'
         },
 
         title: {
@@ -166,7 +166,10 @@ export default H => {
                 minute: '%H:%M',
                 hour: '%H:%M',
                 day: '%Y-%m-%d',
-                week: '%Y-%m',
+                // 增加显示第几周
+                week: {
+                    list: ["第%W周", "%W周"],
+                },
                 month: '%Y-%m',
                 year: '%Y'
             }
