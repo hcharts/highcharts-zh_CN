@@ -1,7 +1,7 @@
 /**
- * Highcharts-zh_CN plugins v1.2.1 (2020-07-29)
+ * Highcharts-zh_CN plugins v1.3.0 (2021-11-12)
  *
- * (c) 2020 Jianshu Technology Co.,LTD (https://jianshukeji.com)
+ * (c) 2021 Jianshu Technology Co.,LTD (https://jianshukeji.com)
  *
  * Author : john@jianshukeji.com, Blue Monkey
  *
