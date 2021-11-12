@@ -8,13 +8,21 @@
  * License: Creative Commons Attribution (CC)
  */
 
-(function(factory) {
-    if (typeof module === 'object' && module.exports) {
-        module.exports = factory;
-    } else {
-        factory(Highcharts);
-    }
-})(function(Highcharts) {
+ 'use strict';
+ (function (factory) {
+     if (typeof module === 'object' && module.exports) {
+         factory['default'] = factory;
+         module.exports = factory;
+     } else if (typeof define === 'function' && define.amd) {
+         define('highcharts/highcharts-zh_CN', ['highcharts'], function (Highcharts) {
+             factory(Highcharts);
+             factory.Highcharts = Highcharts;
+             return factory;
+         });
+     } else {
+         factory(typeof Highcharts !== 'undefined' ? Highcharts : undefined);
+     }
+ }(function (Highcharts) {
 
     var protocol = window.location.protocol;
     if (!/^http(s)?:&/.test(protocol)) {
@@ -35,78 +43,115 @@
             drillUpText: "◁ 返回 {series.name}",
             exitFullscreen: '退出全屏',
             exportData: {
+                annotationHeader: '标注',
                 categoryDatetimeHeader: '时间',
                 categoryHeader: '类别'
             },
-            openInCloud: '在 Highcharts Cloud 中打开',
+            hideData: '隐藏数据表格',
             invalidDate: '无效的时间',
             loading: '加载中...',
             months: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'],
             navigation: {
                 popup: {
                     addButton: "新增",
-                    arrowLine: "直线",
+                    algorithm: '算法',
+                    arrowInfinityLine: '直线',
                     arrowRay: "射线",
                     arrowSegment: "线段",
+                    average: '均值',
                     background: "背景",
                     backgroundColor: "背景颜色",
                     backgroundColors: "背景颜色",
                     borderColor: "边框颜色",
                     borderRadius: "圆角",
                     borderWidth: "边框大小",
+                    bottomBand: '底部带',
                     circle: "圆",
+                    clearFilter: '✕ 清除过滤条件',
                     color: "颜色",
                     connector: "连接",
                     crooked3: "Crooked 3 line",
                     crooked5: "Crooked 5 line",
                     crosshairX: "竖直准星线",
                     crosshairY: "水平准星线",
+                    decimals: '小数',
+                    deviation: '偏差',
                     editButton: "编辑",
                     elliott3: "Elliott 3 line",
                     elliott5: "Elliott 5 line",
+                    ellipse: '椭圆',
+                    factor: '因子',
+                    fastAvgPeriod: '快速平均期',
                     fibonacci: "斐波纳契",
+                    fibonacciTimeZones: '斐波纳契时区',
                     fill: "填充颜色",
                     flags: "标志",
                     fontSize: "字体大小",
                     format: "文本",
                     height: "高度",
+                    highIndex: '最高值下标',
                     horizontalLine: "水平线",
+                    increment: '增量',
+                    index: '下标',
+                    // TODO: Highstock 技术指标命名统一
+                    //indicatorAliases: {}
                     infinityLine: "无限线",
+                    initialAccelerationFactor: '初始加速系数',
                     innerBackground: "内背景",
                     label: "文字标签",
                     labelOptions: "文字标签配置",
                     labels: "文字标签",
                     line: "线",
                     lines: "线条",
+                    longPeriod: '长周期',
+                    lowIndex: '最低值下标',
+                    maxAccelerationFactor: '最大加速系数',
                     measure: "Measure",
                     measureX: "Measure X",
                     measureXY: "Measure XY",
                     measureY: "Measure Y",
+                    multiplier: '乘法',
+                    multiplierATR: 'ATR 乘法',
                     name: "名字",
+                    noFilterMatch: '没有匹配项',
                     outerBackground: "外背景",
                     padding: "内间距",
                     parallelChannel: "并行通道",
+                    period: '周期',
+                    periodATR: 'ATR 周期',
+                    periods: '周期',
+                    periodSenkouSpanB: '森口跨度B周期',
+                    periodTenkan: '天干周期',
                     pitchfork: "杈子",
+                    ranges: '范围',
                     ray: "射线",
                     rectangle: "矩形",
                     removeButton: "删除",
                     saveButton: "保存",
+                    searchIndicators: '搜索技术指标',
                     segment: "段落",
                     series: "数据列",
                     shapeOptions: "图形配置",
                     shapes: "图形",
+                    shortPeriod: '短周期',
+                    signalPeriod: '信号周期',
                     simpleShapes: "简单图形",
+                    slowAvgPeriod: '慢平均周期',
+                    standardDeviation: '标准差',
                     stroke: "线条颜色",
                     strokeWidth: "线条粗细",
                     style: "样式",
+                    timeCycles: '时间周期',
                     title: "标题",
+                    topBand: '顶带',
                     tunnel: "通道",
                     typeOptions: "详情",
                     verticalArrow: "竖直箭头",
                     verticalCounter: "竖直计数器",
                     verticalLabel: "竖直标签",
                     verticalLine: "竖直线",
-                    volume: "成交量"
+                    volume: "成交量",
+                    xAxisUnit: 'x 轴单位'
                 }
             },
             noData: "暂无数据",
@@ -124,6 +169,7 @@
             rangeSelectorFrom: '开始时间',
             rangeSelectorTo: '结束时间',
             rangeSelectorZoom: '范围',
+            // TODO：Highstock stockTools
 
             // Highmaps
             zoomIn: '缩小',
@@ -256,4 +302,4 @@
     };
 
     Highcharts.setOptions(defaultOptionsZhCn);
-});
+ }));
