@@ -1,7 +1,7 @@
 /**
- * Highcharts-zh_CN plugins v1.3.0 (2021-11-12)
+ * Highcharts-zh_CN plugins v1.3.1 (2022-02-23)
  *
- * (c) 2021 Jianshu Technology Co.,LTD (https://jianshukeji.com)
+ * (c) 2022 Jianshu Technology Co.,LTD (https://jianshukeji.com)
  *
  * Author : john@jianshukeji.com, Blue Monkey
  *
@@ -25,7 +25,7 @@
  }(function (Highcharts) {
 
     var protocol = window.location.protocol;
-    if (!/^http(s)?:&/.test(protocol)) {
+    if (!/^http(s)?:$/.test(protocol)) {
         protocol = 'http:';
     }
 
